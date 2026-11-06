@@ -1,0 +1,651 @@
+[gd_scene format=3 uid="uid://b54f1m2lj0nf0"]
+
+[ext_resource type="Script" uid="uid://q2u5k1wk7ej" path="res://main.gd" id="1_main"]
+[ext_resource type="Texture2D" uid="uid://l51m67jmmppc" path="res://assets/textures/bg_tile.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://jps8xrmcp0cc" path="res://assets/textures/cell_a.png" id="3_cella"]
+[ext_resource type="Texture2D" uid="uid://c7okg0ksrgv0d" path="res://assets/textures/cell_b.png" id="4_cellb"]
+[ext_resource type="Texture2D" uid="uid://sv4eqnufirhu" path="res://assets/textures/panel.png" id="6_panel"]
+[ext_resource type="PackedScene" path="res://shift_card.tscn" id="7_card"]
+
+[node name="Main" type="Node2D" unique_id=2004310088]
+script = ExtResource("1_main")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1328870956]
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Board" type="Node2D" parent="." unique_id=1741904595]
+position = Vector2(22, 40)
+
+[node name="Cells" type="Node2D" parent="Board" unique_id=1646800466]
+
+[node name="Cell_0_0" type="NinePatchRect" parent="Board/Cells" unique_id=1212695918]
+offset_right = 88.0
+offset_bottom = 40.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_0_1" type="NinePatchRect" parent="Board/Cells" unique_id=1027127965]
+offset_top = 40.0
+offset_right = 88.0
+offset_bottom = 80.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_0_2" type="NinePatchRect" parent="Board/Cells" unique_id=578383040]
+offset_top = 80.0
+offset_right = 88.0
+offset_bottom = 120.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_0_3" type="NinePatchRect" parent="Board/Cells" unique_id=253198705]
+offset_top = 120.0
+offset_right = 88.0
+offset_bottom = 160.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_1_0" type="NinePatchRect" parent="Board/Cells" unique_id=2121543389]
+offset_left = 88.0
+offset_right = 176.0
+offset_bottom = 40.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_1_1" type="NinePatchRect" parent="Board/Cells" unique_id=51504644]
+offset_left = 88.0
+offset_top = 40.0
+offset_right = 176.0
+offset_bottom = 80.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_1_2" type="NinePatchRect" parent="Board/Cells" unique_id=2006585228]
+offset_left = 88.0
+offset_top = 80.0
+offset_right = 176.0
+offset_bottom = 120.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_1_3" type="NinePatchRect" parent="Board/Cells" unique_id=1259524629]
+offset_left = 88.0
+offset_top = 120.0
+offset_right = 176.0
+offset_bottom = 160.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_2_0" type="NinePatchRect" parent="Board/Cells" unique_id=1211150937]
+offset_left = 176.0
+offset_right = 264.0
+offset_bottom = 40.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_2_1" type="NinePatchRect" parent="Board/Cells" unique_id=1342547224]
+offset_left = 176.0
+offset_top = 40.0
+offset_right = 264.0
+offset_bottom = 80.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_2_2" type="NinePatchRect" parent="Board/Cells" unique_id=1077478650]
+offset_left = 176.0
+offset_top = 80.0
+offset_right = 264.0
+offset_bottom = 120.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_2_3" type="NinePatchRect" parent="Board/Cells" unique_id=774120362]
+offset_left = 176.0
+offset_top = 120.0
+offset_right = 264.0
+offset_bottom = 160.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_3_0" type="NinePatchRect" parent="Board/Cells" unique_id=1632852838]
+offset_left = 264.0
+offset_right = 352.0
+offset_bottom = 40.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_3_1" type="NinePatchRect" parent="Board/Cells" unique_id=1570530412]
+offset_left = 264.0
+offset_top = 40.0
+offset_right = 352.0
+offset_bottom = 80.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_3_2" type="NinePatchRect" parent="Board/Cells" unique_id=1718621598]
+offset_left = 264.0
+offset_top = 80.0
+offset_right = 352.0
+offset_bottom = 120.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_3_3" type="NinePatchRect" parent="Board/Cells" unique_id=1788371160]
+offset_left = 264.0
+offset_top = 120.0
+offset_right = 352.0
+offset_bottom = 160.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_4_0" type="NinePatchRect" parent="Board/Cells" unique_id=803972435]
+offset_left = 352.0
+offset_right = 440.0
+offset_bottom = 40.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_4_1" type="NinePatchRect" parent="Board/Cells" unique_id=263250553]
+offset_left = 352.0
+offset_top = 40.0
+offset_right = 440.0
+offset_bottom = 80.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_4_2" type="NinePatchRect" parent="Board/Cells" unique_id=964204766]
+offset_left = 352.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 120.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_4_3" type="NinePatchRect" parent="Board/Cells" unique_id=849180925]
+offset_left = 352.0
+offset_top = 120.0
+offset_right = 440.0
+offset_bottom = 160.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_5_0" type="NinePatchRect" parent="Board/Cells" unique_id=1530229159]
+offset_left = 440.0
+offset_right = 528.0
+offset_bottom = 40.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_5_1" type="NinePatchRect" parent="Board/Cells" unique_id=201392931]
+offset_left = 440.0
+offset_top = 40.0
+offset_right = 528.0
+offset_bottom = 80.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_5_2" type="NinePatchRect" parent="Board/Cells" unique_id=527761975]
+offset_left = 440.0
+offset_top = 80.0
+offset_right = 528.0
+offset_bottom = 120.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_5_3" type="NinePatchRect" parent="Board/Cells" unique_id=1062693123]
+offset_left = 440.0
+offset_top = 120.0
+offset_right = 528.0
+offset_bottom = 160.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_6_0" type="NinePatchRect" parent="Board/Cells" unique_id=2050006592]
+offset_left = 528.0
+offset_right = 616.0
+offset_bottom = 40.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_6_1" type="NinePatchRect" parent="Board/Cells" unique_id=279337372]
+offset_left = 528.0
+offset_top = 40.0
+offset_right = 616.0
+offset_bottom = 80.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_6_2" type="NinePatchRect" parent="Board/Cells" unique_id=478344447]
+offset_left = 528.0
+offset_top = 80.0
+offset_right = 616.0
+offset_bottom = 120.0
+texture = ExtResource("3_cella")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Cell_6_3" type="NinePatchRect" parent="Board/Cells" unique_id=551673182]
+offset_left = 528.0
+offset_top = 120.0
+offset_right = 616.0
+offset_bottom = 160.0
+texture = ExtResource("4_cellb")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="DayHeaders" type="Node2D" parent="Board" unique_id=400239733]
+
+[node name="Header_Mon" type="NinePatchRect" parent="Board/DayHeaders" unique_id=1021665415]
+self_modulate = Color(1, 0.6784, 0.6784, 1)
+offset_left = 2.0
+offset_top = -20.0
+offset_right = 86.0
+offset_bottom = -2.0
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/DayHeaders/Header_Mon" unique_id=1199811189]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Mon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Header_Tue" type="NinePatchRect" parent="Board/DayHeaders" unique_id=1297667319]
+self_modulate = Color(1, 0.8392, 0.6471, 1)
+offset_left = 90.0
+offset_top = -20.0
+offset_right = 174.0
+offset_bottom = -2.0
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/DayHeaders/Header_Tue" unique_id=518468985]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Tue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Header_Wed" type="NinePatchRect" parent="Board/DayHeaders" unique_id=1584059814]
+self_modulate = Color(0.9922, 0.9412, 0.5412, 1)
+offset_left = 178.0
+offset_top = -20.0
+offset_right = 262.0
+offset_bottom = -2.0
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/DayHeaders/Header_Wed" unique_id=1727451338]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Wed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Header_Thu" type="NinePatchRect" parent="Board/DayHeaders" unique_id=1192219646]
+self_modulate = Color(0.7922, 1, 0.749, 1)
+offset_left = 266.0
+offset_top = -20.0
+offset_right = 350.0
+offset_bottom = -2.0
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/DayHeaders/Header_Thu" unique_id=189834156]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Thu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Header_Fri" type="NinePatchRect" parent="Board/DayHeaders" unique_id=728999438]
+self_modulate = Color(0.6078, 0.9647, 1, 1)
+offset_left = 354.0
+offset_top = -20.0
+offset_right = 438.0
+offset_bottom = -2.0
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/DayHeaders/Header_Fri" unique_id=628169307]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Fri"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Header_Sat" type="NinePatchRect" parent="Board/DayHeaders" unique_id=1431894994]
+self_modulate = Color(0.6275, 0.7686, 1, 1)
+offset_left = 442.0
+offset_top = -20.0
+offset_right = 526.0
+offset_bottom = -2.0
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/DayHeaders/Header_Sat" unique_id=730085513]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Sat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Header_Sun" type="NinePatchRect" parent="Board/DayHeaders" unique_id=42069714]
+self_modulate = Color(0.7412, 0.698, 1, 1)
+offset_left = 530.0
+offset_top = -20.0
+offset_right = 614.0
+offset_bottom = -2.0
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/DayHeaders/Header_Sun" unique_id=98528433]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Sun"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HourLabels" type="Node2D" parent="Board" unique_id=429275170]
+
+[node name="Hour_6" type="NinePatchRect" parent="Board/HourLabels" unique_id=201311796]
+self_modulate = Color(0.9098, 0.8627, 1, 1)
+offset_left = -22.0
+offset_top = -9.0
+offset_right = -1.0
+offset_bottom = 9.0
+texture = ExtResource("6_panel")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/HourLabels/Hour_6" unique_id=769831881]
+layout_mode = 0
+offset_right = 21.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hour_10" type="NinePatchRect" parent="Board/HourLabels" unique_id=535361150]
+self_modulate = Color(0.9098, 0.8627, 1, 1)
+offset_left = -22.0
+offset_top = 31.0
+offset_right = -1.0
+offset_bottom = 49.0
+texture = ExtResource("6_panel")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/HourLabels/Hour_10" unique_id=318810604]
+layout_mode = 0
+offset_right = 21.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hour_14" type="NinePatchRect" parent="Board/HourLabels" unique_id=1999438121]
+self_modulate = Color(0.9098, 0.8627, 1, 1)
+offset_left = -22.0
+offset_top = 71.0
+offset_right = -1.0
+offset_bottom = 89.0
+texture = ExtResource("6_panel")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/HourLabels/Hour_14" unique_id=1420874069]
+layout_mode = 0
+offset_right = 21.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hour_18" type="NinePatchRect" parent="Board/HourLabels" unique_id=1324888982]
+self_modulate = Color(0.9098, 0.8627, 1, 1)
+offset_left = -22.0
+offset_top = 111.0
+offset_right = -1.0
+offset_bottom = 129.0
+texture = ExtResource("6_panel")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/HourLabels/Hour_18" unique_id=1382984134]
+layout_mode = 0
+offset_right = 21.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "18"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hour_22" type="NinePatchRect" parent="Board/HourLabels" unique_id=551876318]
+self_modulate = Color(0.9098, 0.8627, 1, 1)
+offset_left = -22.0
+offset_top = 151.0
+offset_right = -1.0
+offset_bottom = 169.0
+texture = ExtResource("6_panel")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Board/HourLabels/Hour_22" unique_id=753488653]
+layout_mode = 0
+offset_right = 21.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Overlay" type="Node2D" parent="." unique_id=741144284]
+
+[node name="Tray" type="Node2D" parent="." unique_id=928567741]
+position = Vector2(30, 248)
+
+[node name="TrayPanel" type="NinePatchRect" parent="Tray" unique_id=1484024935]
+self_modulate = Color(0.9098, 0.8627, 1, 1)
+offset_left = -4.0
+offset_top = -22.0
+offset_right = 146.0
+offset_bottom = 84.0
+texture = ExtResource("6_panel")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Title" type="Label" parent="Tray" unique_id=1966841325]
+offset_top = -21.0
+offset_right = 120.0
+offset_bottom = -5.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Your team"
+vertical_alignment = 1
+
+[node name="Help" type="Label" parent="Tray" unique_id=684756687]
+offset_left = 158.0
+offset_right = 488.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0.3569, 0.2902, 0.4196, 1)
+text = "Drag an animal onto the schedule. Drop a placed card outside the grid to put it back."
+autowrap_mode = 3
+
+[node name="Tray_Sarah" parent="Tray" unique_id=1999812565 instance=ExtResource("7_card")]
+employee_name = "Sarah"
+color = Color(1, 0.7098, 0.8157, 1)
+is_tray = true
+remaining = 5
+
+[node name="Tray_Jenny" parent="Tray" unique_id=1318721522 instance=ExtResource("7_card")]
+position = Vector2(24, 0)
+employee_name = "Jenny"
+species = "cat"
+color = Color(0.7843, 0.7137, 1, 1)
+is_tray = true
+remaining = 5
+
+[node name="Tray_David" parent="Tray" unique_id=1596788466 instance=ExtResource("7_card")]
+position = Vector2(48, 0)
+employee_name = "David"
+species = "owl"
+color = Color(1, 0.8392, 0.6471, 1)
+is_tray = true
+remaining = 5
+
+[node name="Tray_Nigel" parent="Tray" unique_id=1922616981 instance=ExtResource("7_card")]
+position = Vector2(72, 0)
+employee_name = "Nigel"
+species = "chick"
+color = Color(0.9922, 0.9412, 0.5412, 1)
+is_tray = true
+remaining = 5
+
+[node name="Tray_Marc" parent="Tray" unique_id=347363034 instance=ExtResource("7_card")]
+position = Vector2(96, 0)
+employee_name = "Marc"
+species = "fox"
+color = Color(1, 0.702, 0.5412, 1)
+is_tray = true
+remaining = 5
+
+[node name="Tray_Clara" parent="Tray" unique_id=909861231 instance=ExtResource("7_card")]
+position = Vector2(120, 0)
+employee_name = "Clara"
+species = "frog"
+color = Color(0.7255, 0.9647, 0.7922, 1)
+is_tray = true
+remaining = 5
+
+[node name="Cards" type="Node2D" parent="." unique_id=1317713885]

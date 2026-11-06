@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://ckbnsgto6qgs7"]
+
+[ext_resource type="FontFile" uid="uid://6rsgqkxeafoa" path="res://assets/fonts/CutePixel.ttf" id="1_e1x85"]
+
+[resource]
+default_font = ExtResource("1_e1x85")
+default_font_size = 16
